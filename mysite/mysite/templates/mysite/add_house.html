@@ -1,0 +1,17 @@
+<!-- myapp/templates/myapp/add_house.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add House</title>
+</head>
+<body>
+    <h1>Add a New House</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add House</button>
+    </form>
+    <a href="{% url 'people_list' %}">Back to People List</a>
+</body>
+</html>
