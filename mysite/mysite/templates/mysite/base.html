@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mysite/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'mysite/logo.png' %}" alt="StipStudenten Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="button">Ev</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <!-- Main content goes here -->
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+</body>
+</html>
