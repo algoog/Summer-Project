@@ -1,0 +1,21 @@
+<!-- houses/templates/houses/ev.html -->
+
+{% extends 'mysite/base.html' %}
+
+{% block title %}Houses{% endblock %}
+
+{% block content %}
+    <h1>Houses</h1>
+    <ul>
+        {% for house in houses %}
+            <li>
+                <h2>{{ house.address }}</h2>
+                <p>Price: ${{ house.price }}</p>
+                <p>{{ house.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    
+
+{% endblock %}

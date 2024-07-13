@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from .views import ev_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,5 @@ urlpatterns = [
     path('people/', views.people_list, name='people_list'),
     path('add_person/', views.add_person, name='add_person'),
     path('add_house/', views.add_house, name='add_house'),
+    path('ev/', views.ev_view, name='ev'),
 ]

@@ -28,3 +28,7 @@ def add_house(request):
     else:
         form = HouseForm()
     return render(request, 'mysite/add_house.html', {'form': form})
+
+def ev_view(request):
+    houses = House.objects.all()
+    return render(request, 'mysite/ev.html', {'houses': houses})
